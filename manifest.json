@@ -1,0 +1,28 @@
+﻿{
+  "manifest_version": 3,
+  "name": "Smart Tab Manager",
+  "version": "1.0.0",
+  "description": "Intelligent tab grouping and management",
+  "permissions": ["tabs", "storage", "activeTab", "commands","tabGroups"],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "commands": {
+    "cycle-tab-groups": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Y",
+        "mac": "Command+Shift+Y"
+      },
+      "description": "Cycle through tab groups"
+    },
+    "navigate-within-group": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+T",
+        "mac": "Command+Shift+T"
+      },
+      "description": "Navigate tabs within current group"
+    }
+  }
+}
+

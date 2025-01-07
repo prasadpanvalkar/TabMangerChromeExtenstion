@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Smart Tab Manager</title>
+  <style>
+    body {
+      width: 300px;
+      padding: 10px;
+      font-family: Arial, sans-serif;
+    }
+    .search-container {
+      display: flex;
+      margin-bottom: 10px;
+    }
+    #searchInput {
+      flex-grow: 1;
+      padding: 5px;
+    }
+    .tab-list {
+      max-height: 300px;
+      overflow-y: auto;
+    }
+    .tab-group {
+      margin-bottom: 10px;
+      border: 1px solid #ddd;
+      padding: 5px;
+    }
+    .tab-item {
+      display: flex;
+      align-items: center;
+      margin: 5px 0;
+      cursor: pointer;
+    }
+    .tab-item img {
+      width: 16px;
+      height: 16px;
+      margin-right: 10px;
+    }
+    .group-actions {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="search-container">
+    <input type="text" id="searchInput" placeholder="Search tabs...">
+  </div>
+
+  <div id="tabGroupContainer" class="tab-list"></div>
+
+  <div class="group-actions">
+    <button id="autoGroupBtn">Auto Group Tabs</button>
+    <button id="openOptionsBtn">Manage Groups</button>
+  </div>
+
+  <script type="module" src="popup.js"></script>
+</body>
+</html>
